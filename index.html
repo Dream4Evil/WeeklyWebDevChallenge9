@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>MariaAnna photography</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    
+    <!--Bootstrap Carousel-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap_carousel.css">
+    <script src="js/bootstrap.js"></script>
+
+    
+</head>
+
+<body onresize="checkMenu()" onload="checkMenu()">
+   
+    <main>
+        
+        <section id="welcome">
+          
+           <div class="welcomeTextContainer">
+               <h1>
+                <img class="welcome__logo" src="img/logoMariaAnna.png" alt="Maria Anna photography"> 
+               </h1>   
+                <h2>See the world through my lens</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris.</p>
+            </div>
+               
+            <a href="#about">
+                <img class="welcome__arrow" src="img/arrowDown.png" alt="arrow down">
+            </a>
+                
+        </section>
+        
+        <nav>
+
+            <ul>
+              <div class="nav__mobileButton">
+               <a href="javascript:void(0);" class="nav__mobileButtonIcon" onclick="myFunction()">&#9776;</a>
+              </div>
+              
+              <div class="nav__links" id="nav__links">
+                   <li class="floatLeft"><a class="welcome__logo--link" href="#welcome"><img src="img/logoMariaAnnaMenu.png" alt="Anna Maria Logo"></a></li>
+                   <li><a href="#contact">Contact me</a></li>
+                   <li><a href="#follow">Follow me</a></li>
+                   <li><a href="#works">Works</a></li>
+                   <li><a href="#about">About me</a></li>
+               </div>
+               
+            </ul>
+            
+        </nav>
+        
+        <!--Nav mobile-->
+        <script>
+        function myFunction() {
+          let x = document.querySelector("nav ul .nav__links");
+            if (!x.classList.contains("displayNone")){
+                x.classList.add("displayNone");
+            } else {
+                x.classList.remove("displayNone");
+            }
+        }
+            
+//        Listener
+        function checkMenu() { 
+         let m = document.getElementById('nav__links');
+         if(window.innerWidth>=768){
+//             alert(window.innerWidth);
+             if(m.classList.contains("displayNone")){
+                 m.classList.remove("displayNone");
+             }   
+         } else 
+         {
+            m.classList.add("displayNone");
+         }
+//            m.addEventListener("click", modifyText, false); 
+       } 
+            
+        </script>
+        
+        <section id="about">
+            <h2>A little about me</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris.
+            </p>
+        </section>
+        
+        <section id="works">
+           
+            <h2 class="textAlignCenter">Works</h2>   
+            <hr>
+            
+            <div class="worksGrid grayScale50">
+
+                <div class="workContainer worksNature">
+                    <div class="darkerContainer">
+                       <a class="work__link" href="">
+                            <div class="worksGrid__text">
+                                <h3>Nature</h3>
+                                <p>beautiful nature</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                   
+                <div class="workContainer worksPeople">
+                 <div class="darkerContainer">
+                  <a class="work__link" href="">
+                   <div class="worksGrid__text">
+                        <h3>People</h3>
+                        <p>beautiful people</p>
+                    </div>
+                    </a>
+                 </div>
+                </div>
+
+                <div class="workContainer worksUrban">
+                    <div class="darkerContainer">
+                     <a class="work__link" href="">
+                      <div class="worksGrid__text">
+                           <h3>Urban</h3>
+                            <p>beautiful urban</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="workContainer worksWedding">
+                    <div class="darkerContainer">
+                      <a class="work__link" href="">
+                       <div class="worksGrid__text">
+                            <h3>Wedding</h3>
+                            <p>beautiful wedding</p>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="workContainer worksArchitecture">
+                 <div class="darkerContainer">
+                  <a class="work__link" href="">
+                   <div class="worksGrid__text">
+                        <h3>Architecture</h3>
+                        <p>beautiful architecture</p>
+                    </div>
+                    </a>
+                 </div>
+                </div>
+
+                <div class="workContainer worksAnimals brightness50">
+                 <div class="darkerContainer">
+                  <a class="work__link" href="">
+                   <div class="worksGrid__text">
+                        <h3>Animals</h3>
+                        <p>beautiful animals</p>
+                    </div>
+                    </a>
+                 </div>
+                </div>
+                
+            </div>
+                
+            <button>Load more</button>
+        
+        <!--Carousel-->
+
+        <div id="slider" class="carousel slide" data-ride="carousel">
+
+            <h2>See the world through my lens</h2>
+            <hr>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p>John Doe CEO at uknown</p>
+                </div>
+                <div class="carousel-item">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p>John Doe CEO at uknown</p>
+                </div>
+                <div class="carousel-item">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p>John Doe CEO at uknown</p>
+                </div>
+            </div>
+
+            <ol class="carousel-indicators">
+                <li data-target="#slider" data-slide-to="0" class="active"></li>
+                <li data-target="#slider" data-slide-to="1"></li>
+                <li data-target="#slider" data-slide-to="2"></li>
+            </ol>
+
+        </div>
+    
+       <!--Video-->
+       
+        <a id="video" class="video__link grayScale40" href="">
+              <div class="video__playButton">
+                  <p>></p>
+              </div>
+              <p class=".video__captionText">Watch my video</p>
+              <div class="video__line--leftUp"></div>
+        </a>
+
+            
+       </section>
+        
+        <!--follow-->
+        
+        <section id="follow">
+           
+            <h2>Follow me</h2>
+            <hr>
+            <ul>
+                <li><a class="" href=""><img class="" src="icons/466-pinterest.svg" alt="pinterest"></a></li>
+                <li><a href=""><img class="follow__instagram" src="icons/403-instagram.svg" alt="instagram"></a></li>
+                <li><a href=""><img src="icons/407-twitter.svg" alt="twitter"></a></li>
+                <li><a href=""><img src="icons/396-google-plus.svg" alt="google plus"></a></li>
+                <li><a href=""><img class="follow__tumblr" src="icons/442-tumblr.svg" alt="tumblr"></a></li>
+            </ul>
+            
+        </section>
+        
+        <!--contact-->
+        
+        <section id="contact">
+           <div class="contactContainer">
+                <h2>Contact me</h2>
+                <hr>
+                <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                <form action="">
+                   <input type="text" placeholder="Your Name*">
+                   <input type="email" placeholder="Your E-mail address*">
+                    <textarea type="text" placeholder="Your Message" class="contact__textMessage"></textarea>
+                   <div class="form__bellow">
+                       <p class="contact__required">All fields marked with an asteriks (*) are required</p>
+                       <button class="contact__sendButton floatRight">Send</button>
+                   </div>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer>
+      <a class="grayScale50" href="#welcome">
+       <img class="footer__imageAngleUp" src="img/angleUp.png" alt="angle up">
+       </a>
+        <img class="footer__imageLogo" src="img/logoFooterMariaAnna.png" alt="Maria Anna">
+        <p class="footerCopyright">© Copyright 2014 MariaAnna</p>
+    </footer>
+    
+</body>
+<script src="js/javascript.js"></script>
+</html>
