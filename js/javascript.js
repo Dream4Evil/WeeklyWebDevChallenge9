@@ -47,16 +47,14 @@ function checkMenu() {
 
 
 
-//function mobileMenu__collapse(){
-//    alert("It works1!");
-//     if(window.innerWidth<=768){
-//        let x = document.querySelector("nav ul .nav__links");
-//        x.classList.add("displayNone");
-//         alert("It works!");
-//    }
-//}
-//
-//mainNavLinks.forEach(function(el){
-//    el.addEventListener("click", mobileMenu__collapse(), false);
-//}
-//);
+function mobileMenu__collapse(){
+     if(window.innerWidth<=768){
+        let x = document.querySelector("nav ul .nav__links");
+        x.classList.add("displayNone");
+    }
+}
+
+mainNavLinks.forEach(function(el){
+    el.addEventListener("click", mobileMenu__collapse, false);
+}
+);
