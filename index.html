@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <title>MariaAnna photography</title>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
@@ -11,8 +11,8 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
-    <link rel="stylesheet" href="css/bootstrap_carousel.css">
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap_carousel.min.css">
+    <script src="js/bootstrap.min.js"></script>
 
     
 </head>
@@ -56,34 +56,6 @@
             </ul>
             
         </nav>
-        
-        <!--Nav mobile-->
-        <script>
-        function myFunction() {
-          let x = document.querySelector("nav ul .nav__links");
-            if (!x.classList.contains("displayNone")){
-                x.classList.add("displayNone");
-            } else {
-                x.classList.remove("displayNone");
-            }
-        }
-            
-//        Listener
-        function checkMenu() { 
-         let m = document.getElementById('nav__links');
-         if(window.innerWidth>=768){
-//             alert(window.innerWidth);
-             if(m.classList.contains("displayNone")){
-                 m.classList.remove("displayNone");
-             }   
-         } else 
-         {
-            m.classList.add("displayNone");
-         }
-//            m.addEventListener("click", modifyText, false); 
-       } 
-            
-        </script>
         
         <section id="about">
             <h2>A little about me</h2>
