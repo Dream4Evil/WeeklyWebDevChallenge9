@@ -122,6 +122,12 @@ main{
     margin-bottom: 15px;
 }
 
+@media (max-width: 576px){
+    #welcome h2{
+        font-size: 2.5em;
+    }
+}
+
 #welcome p {
     font-size: 1.3rem;
     max-width: 40vw;
@@ -130,6 +136,12 @@ main{
 @media (max-width: 768px){
     #welcome p {
         max-width: 80vw;
+    }
+}
+
+@media (max-width: 576px){
+    #welcome p{
+        font-size: 1.2em;
     }
 }
 
@@ -493,17 +505,16 @@ nav ul > div.nav__links li a.current{
     overflow: hidden;
 }
 
-/*
-@media (max-width: 768px){
-    #works .worksGrid .worksGrid__text{
-        min-height:200px;
-    }
-}
-*/
-
 #works .worksGrid .worksGrid__text:hover{
     min-height: 20vh;
     min-width: 15vw;
+}
+
+@media (max-width: 576px){
+    #works .worksGrid .worksGrid__text:hover{
+        min-height: 10vh;
+        min-width: 40vw;
+    }
 }
 
 #works .worksGrid .worksGrid__text:before, .worksGrid__text:after, .worksGrid__text>:first-child:before, .worksGrid__text>:first-child:after
@@ -667,6 +678,7 @@ nav ul > div.nav__links li a.current{
 @media (max-width: 576px){
     #follow{
         padding-top: 80px;
+        padding-bottom: 0px;
     }
 }
 
