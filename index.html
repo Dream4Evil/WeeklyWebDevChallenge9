@@ -12,9 +12,8 @@
     <!--Bootstrap Carousel-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-    <link rel="stylesheet" href="css/bootstrap_carousel.min.css">
-    <script src="js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap_carousel.min.css">
+      <script src="js/bootstrap.min.js"></script>
 
     
 </head>
@@ -27,7 +26,11 @@
           
            <div class="welcomeTextContainer">
                <h1>
-                <img class="welcome__logo" src="img/compressed/logoMariaAnna.webp" alt="Maria Anna photography"> 
+               <picture>
+                   <source srcset="img/compressed/logoMariaAnna.webp" type="image/webp">
+                   <source srcset="img/logoMariaAnna.png" type="image/png">
+                   <img class="welcome__logo" src="img/compressed/logoMariaAnna.png" alt="Maria Anna photography"> 
+                </picture>
                </h1>   
                 <h2>See the world through my lens</h2>
                 <hr>
@@ -35,7 +38,11 @@
             </div>
                
             <a href="#about">
-                <img class="welcome__arrow" src="img/compressed/arrowDown.webp" alt="arrow down">
+               <picture>
+                   <source srcset="img/compressed/arrowDown.webp" type="image/webp">
+                   <source srcset="img/arrowDown.png" type="image/png">
+                   <img class="welcome__arrow" src="img/arrowDown.png" alt="go to about section">
+               </picture>
             </a>
                 
         </section>
@@ -48,7 +55,15 @@
               </div>
               
               <div class="nav__links" id="nav__links">
-                   <li class="floatLeft"><a class="welcome__logo--link" href="#welcome"><img src="img/compressed/logoMariaAnnaMenu.webp" alt="Anna Maria Logo"></a></li>
+                   <li class="floatLeft">
+                       <a class="welcome__logo--link" href="#welcome">
+                           <picture>
+                              <source srcset="img/compressed/logoMariaAnnaMenu.webp" type="image/webp">
+                              <source srcset="img/logoMariaAnnaMenu.png" type="image/png">
+                               <img src="img/logoMariaAnnaMenu.png" alt="go to start of the site">
+                           </picture>
+                       </a>
+                   </li>
                    <li><a href="#contact">Contact me</a></li>
                    <li><a href="#follow">Follow me</a></li>
                    <li><a href="#works">Works</a></li>
@@ -225,9 +240,17 @@
     
     <footer>
       <a class="grayScale50" href="#welcome">
-       <img class="footer__imageAngleUp" src="img/compressed/angleUp.webp" alt="angle up">
-       </a>
-        <img class="footer__imageLogo" src="img/compressed/logoFooterMariaAnna.webp" alt="Maria Anna">
+          <picture>
+              <source srcset="img/compressed/angleUp.webp" type="image/webp">
+              <source srcset="img/angleUp.png" type="image/png">
+              <img class="footer__imageAngleUp" src="img/angleUp.png" alt="go to start of the site">
+          </picture>
+      </a>
+          <picture>
+              <source srcset="img/compressed/logoFooterMariaAnna.webp" type="image/webp">
+              <source srcset="img/logoFooterMariaAnna.png" type="image/png">
+              <img class="footer__imageLogo" src="img/logoFooterMariaAnna.png" alt="Maria Anna">
+          </picture>
         <p class="footerCopyright">© Copyright 2014 MariaAnna</p>
     </footer>
     
