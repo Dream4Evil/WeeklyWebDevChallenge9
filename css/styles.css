@@ -7,27 +7,11 @@ body{
     color: #595959;
 }
 
-.grayScale50{
-    filter: grayscale(50%);
-}
-
-.grayScale40{
-    filter: grayscale(40%);
-}
-
-.opacity50{
-    opacity: 0.5;
-}
-
-.brightness80{
-    filter: brightness(80%);
-}
-
 h1, h2, h3, h4, h5, h6{
     font-family: 'Playfair Display', serif;    
 }
 
-button{
+.btn{
     color: white;
     margin: 0 auto;
     padding: 10px 35px 10px 35px;
@@ -37,44 +21,44 @@ button{
     transition: all .2s ease-in-out;
 }
 
-button:hover{
+.btn:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
 
-main{
+.main{
     padding: 15px;
 }
 
-#about hr, #works hr, #follow hr, #contact hr, #carousel hr{
+.about hr, .works hr, .follow hr, .contact hr, .carousel hr{
     border: 1px solid #d07c7c;
     margin-bottom: 30px;
     width: 100px;
 }
 
-.displayNone{
+.hidden{
     display: none;
 }
 
-.floatLeft{
+.block--left{
     float: left !important;
 }
 
-.floatRight{
+.block--right{
     float: right;
 }
 
-.textAlignCenter{
+.text--center{
     text-align: center;
 }
 
 /*---welcome---*/
 
-#about h2, #works h2, #follow h2, #contact h2{
+.about h2, .works h2, .follow h2, .contact h2{
     text-transform: uppercase;
 }
 
-#welcome{
+.welcome{
     background-image: 
     url(../img/welcome.png);
     background-size: cover;
@@ -82,12 +66,12 @@ main{
 }
 
 @media (max-width: 768px){
-    #welcome{
+    .welcome{
         background-position: center center;
     }
 }
 
-#welcome .welcomeTextContainer{
+.welcome__body{
     min-height: 60vh;
     color: white;
     display: flex;
@@ -96,56 +80,57 @@ main{
     flex-direction: column;
 }
 
-#welcome .welcomeTextContainer h1{
+.welcome__main_title{
     margin: 0;
     padding: 0;
 }
 
-#welcome .welcome__logo{
+.welcome__logo{
     margin-top: 10vh;
     margin-bottom: 35px;
 }
 
-#welcome .welcome__logo--link{
+.welcome__logo--link{
     border-bottom: none !important;
-        float: left !important;
 }
 
-#welcome hr{
+/*hr*/
+.welcome__break{
     border: 2px solid white;
     width: 100px;
 }
 
-#welcome h2{
+.welcome__title{
     font-size: 3.5em;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 @media (max-width: 576px){
-    #welcome h2{
+    .welcome__title{
         font-size: 2.5em;
     }
 }
 
-#welcome p {
+/*p*/
+.welcome__text{
     font-size: 1.3rem;
     max-width: 40vw;
 }
 
 @media (max-width: 768px){
-    #welcome p {
+    .welcome__text{
         max-width: 80vw;
     }
 }
 
 @media (max-width: 576px){
-    #welcome p{
+    .welcome__text{
         font-size: 1.2em;
     }
 }
 
-#welcome .welcome__arrow{
+.welcome__arrow{
     animation-duration: 6s;
     animation-name: downAndUp;
     animation-iteration-count: infinite;
@@ -171,7 +156,7 @@ main{
 
 /*---menu---*/
 
-nav{
+.nav{
     background-color: #f1f1f1;
     border-bottom: 0.1px solid lightgrey;
     position: -webkit-sticky;
@@ -181,7 +166,8 @@ nav{
     z-index: 100;
 }
 
-nav ul{
+/*ul*/
+.nav__list{
     height: 54px;
     margin: 0;
     padding: 0;
@@ -190,43 +176,40 @@ nav ul{
 }
 
 @media (max-width: 768px){
-    nav ul{
+    .nav__list{
         height: auto;
     }
 }
 
-nav ul > div.nav__links li{
+/*li*/
+.nav__item{
     display: inline-block;
     float: right;
     text-transform: uppercase;
 }
 
-nav ul div.nav__mobileButton{
+.nav__mobile_button{
     height: 54px;
-/*    padding: 0;*/
-/*    display: inline-block;*/
     float: right;
     width: 100%;
     text-transform: uppercase;
 }
 
-nav ul div.nav__mobileButton a{
-/*    text-align: center;*/
-/*    width: 100px;*/
-
+.mobile_button__link{
+    text-align: center;
     font-size: 2.5rem;
     display: block;
     margin: 0 auto;
 }
 
 @media (min-width: 769px){
-    nav ul div.nav__mobileButton{
+    .mobile_button__link{
         display: none;
         float: right;
     }
 }
 
-nav a.nav__mobileButtonIcon{
+.mobile_button__icon{
     color: #595959;
     text-decoration: none;
     width: 36px;
@@ -234,23 +217,17 @@ nav a.nav__mobileButtonIcon{
     height: 46px;
 }
 
-nav ul div.nav__links{
-/*    display: block;*/
-}
-
-
-
 /*Linki*/
 
 @media (max-width: 768px){
-    nav ul li{
+    .nav__item{
         display: none;
         display: block;
         height: 54px;
     }
 }
 
-nav ul > div.nav__links li  a{
+.nav__link{
     color: #595959;
     display: block;
     padding: 4px 4px;
@@ -260,107 +237,95 @@ nav ul > div.nav__links li  a{
     transition: all .2s ease-in-out;
 }
 
-nav ul > div.nav__links li a:hover{
+.nav__link:hover{
     color: #d07c7c;
     transform: scale(1.1);
 }
 
-nav ul > div.nav__links li a.current{
+.nav__link--current{
   border-bottom: 2px solid #d07c7c;
 }
 
 @media screen and (max-width: 768px) {
-  nav ul div.nav__links li{
-/*    float: none;*/
-/*      display: none;*/
+  .nav__item{
       width: 100%;
   }
 }
 
-/*
-@media (max-width: 768px){
-    nav ul li a.navMenu__button{
-        display: block;
-    }
-}
-
-@media (min-width: 768px){
-    nav ul li a.navMenu__button{
-        display: none;
-    }
-}
-*/
-
 /*---about me---*/
 
-#about{
+.about{
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    padding-top: 10vh;
+    padding-top: 100px;
+    padding-bottom: 20px;
 }
 
-#about p{
+.about__title{
+    text-align: center;
+}
+
+/*p*/
+.about__text{
+    margin-top: 0;
     text-align: center;
     width: 60vw;
 }
 
 @media (max-width:768px){
-    #about{
-    margin-top: 7vh;
+    .about__text{
+    margin-top: 0;
     margin-bottom: 2vh;
     padding-top: 7vh;
     }
 }
 
 @media (max-width:768px){
-    #about p{
+    .about__text{
         width: 80vw; 
     }
 }
 
 @media (max-width:576px){
-    #about p{
+    .about__text{
         width: 80vw; 
     }
 }
 
 /*---works---*/
 
-#works{
-    padding-top: 10vh;
+.works{
+    padding-top: 80px;
 }
 
-#works .worksGrid{
+.works__body{
     display: grid;
+    filter: grayscale(50%);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 5px;
     min-height: 100vh;
     margin-top: 30px;
-/*    padding-top: ;*/
     text-align: center;
 }
 
 @media (max-width: 768px){
-    #works .worksGrid{
+    .works__body{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
 }
 
 @media (max-width: 576px){
-    #works .worksGrid{
+    .works__body{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
-    
 }
 
-#works .worksGrid .workContainer, #works .worksGrid .darkerContainer{
+.works__block, .works__block--darker{
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -369,133 +334,134 @@ nav ul > div.nav__links li a.current{
     align-items: center;
 }
 
-#works .worksGrid .worksNature{
+.works__block--darker{
+    height: 100%;
+    width: 100%;
+}
+
+.works__block--darker:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.works__nature{
     display: flex;
     background-image: url(../img/nature.png);;
     grid-area: 1/1/1/3;
 }
 
 @media (max-width: 768px){
-    #works .worksGrid .worksNature{
+    .works__nature{
         grid-area: 1/1/2/2;
     }
 }
 
 @media (max-width: 576px){
-    #works .worksGrid .worksNature{
+    .works__nature{
         grid-area: 1/1/2/2;
     }
 }
 
-#works .worksGrid .worksPeople{
+.works__people{
     background-image: 
     url(../img/people.png);
     grid-area: 2/1/2/1;
 }
 
 @media (max-width: 768px){
-    #works .worksGrid .worksPeople{
+    .works__people{
         grid-area: 1/2/2/3;
     }
 }
 
 @media (max-width: 576px){
-    #works .worksGrid .worksPeople{
+    .works__people{
         grid-area: 2/1/3/2;
     }
 }
 
-#works .worksGrid .worksUrban{
+.works__urban{
     background-image: 
     url(../img/urban.png);
     grid-area: 1/3/3/3;
 }
 
 @media (max-width: 768px){
-    #works .worksGrid .worksUrban{
+    .works__urban{
         grid-area: 2/1/3/2;
     }
 }
 
 @media (max-width: 576px){
-    #works .worksGrid .worksUrban{
+    .works__urban{
         grid-area: 3/1/4/2;
     }
 }
 
-#works .worksGrid .worksWedding{
+.works__wedding{
     background-image: 
     url(../img/wedding.png);
     grid-area: 2/2/3/3;
 }
 
 @media (max-width: 768px){
-    #works .worksGrid .worksWedding{
+    .works__wedding{
         grid-area: 2/2/2/3;
     }
 }
 
 @media (max-width: 576px){
-    #works .worksGrid .worksWedding{
+    .works__wedding{
         grid-area: 4/1/5/2;
     }
 }
 
-#works .worksGrid .worksArchitecture{
+.works__architecture{
     background-image: 
     url(../img/architecture.png);
     grid-area: 3/1/3/3;
 }
 
 @media (max-width: 768px){
-    #works .worksGrid .worksArchitecture{
+    .works__architecture{
         grid-area: 3/1/3/2;
     }
 }
 
 @media (max-width: 576px){
-    #works .worksGrid .worksArchitecture{
+    .works__architecture{
         grid-area: 5/1/6/2;
     }
 }
 
-#works .worksGrid .worksAnimals{
+.works__animals{
     background-image: 
     url(../img/animals.png);
     grid-area: 3/3/3/3;
 }
 
 @media (max-width: 768px){
-    #works .worksGrid .worksAnimals{
+    .works__animals{
         grid-area: 3/2/3/3;
     }
 }
 
 @media (max-width: 576px){
-    #works .worksGrid .worksAnimals{
+    .works__animals{
         grid-area: 6/1/7/2;
     }
 }
 
-#works .worksGrid a.work__link{
+.works__link{
     text-decoration: none;
 }
 
-#works .worksGrid .darkerContainer{
-    height: 100%;
-    width: 100%;
-}
-
-#works .worksGrid .darkerContainer:hover{
-    background: rgba(0, 0, 0, 0.6);
-}
-
-#works .worksGrid .worksGrid__text{
+.works__caption{
 /*    flex*/
+    color: white;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center;
-/*    rest*/
+/*    others*/
     padding: 10px 40px 14px 40px;
     position: relative;
     min-height: 0px;
@@ -505,76 +471,77 @@ nav ul > div.nav__links li a.current{
     overflow: hidden;
 }
 
-#works .worksGrid .worksGrid__text:hover{
+.works__caption:hover{
     min-height: 20vh;
     min-width: 15vw;
 }
 
 @media (max-width: 576px){
-    #works .worksGrid .worksGrid__text:hover{
+    .works__caption:hover{
         min-height: 10vh;
         min-width: 40vw;
     }
 }
 
-#works .worksGrid .worksGrid__text:before, .worksGrid__text:after, .worksGrid__text>:first-child:before, .worksGrid__text>:first-child:after
+.works__caption:before, .works__caption:after, 
+.works__caption>:first-child:before, .works__caption>:first-child:after
 {
-    position: absolute; 
-    content:'';
-    width: 20px; 
-    height: 20px;
     border-color: white;
     border-style: solid;
+    content:'';
+    height: 20px;
+    position: absolute; 
+    width: 20px; 
 }
 
-#works .worksGrid .worksGrid__text:before, .video__playButton{
+.works__caption:before, .video__button{
     margin-bottom: 20px;
 }
 
-#works .worksGrid .worksGrid__text:before, .video__playButton:before {
+.works__caption:before, .video__button:before {
+    border-width: 1px 0 0 1px;    
     top: 0;
     left: 0;
-    border-width: 1px 0 0 1px;
 }
 
-#works .worksGrid .worksGrid__text:after, .video__playButton:after {
+.works__caption:after, .video__button:after {
+    border-width: 1px 1px 0 0;
     top:0;
     right:0;
-    border-width: 1px 1px 0 0;
 }
 
-#works .worksGrid .worksGrid__text>:first-child:before, .video__playButton>:first-child:before {
+.works__caption>:first-child:before, .video__button>:first-child:before {
+    border-width: 0 1px 1px 0;   
     bottom:0;
     right:0;
-    border-width: 0 1px 1px 0
 }
 
-#works .worksGrid .worksGrid__text>:first-child:after, .video__playButton>:first-child:after{
+.works__caption>:first-child:after, .video__button>:first-child:after{
+    border-width: 0 0 1px 1px;
     bottom:0;
     left:0;
-    border-width: 0 0 1px 1px
 }
 
-#works .worksGrid h3, #works p{
+.works__title, .works__text{
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 2px;
     padding-bottom: 5px;
 }
 
-#works .worksGrid h3{
+.works__title{
+    border-bottom: 1px solid white;
     color: white;
     text-transform: uppercase;
     place-self: center;
-    border-bottom: 1px solid white;
 }
 
-#works .worksGrid p{
+.works__text{
     color: white;
     place-self: center;
 }
 
-#works button{
+.works__btn{
     background-position: center center;
     display: block;
     margin-top: 40px;
@@ -583,7 +550,7 @@ nav ul > div.nav__links li a.current{
 
 /*---Carousel---*/
 
-#slider {
+.carousel{
     margin: 0 auto;
     margin-top: 120px;
     margin-bottom: 100px;
@@ -592,42 +559,36 @@ nav ul > div.nav__links li a.current{
 }
 
 @media (max-width: 768px){
-    #slider{
+    .carousel{
         width: 80vw;
     }
 }
 
-#slider .carousel-item {
-/*    z-index: 1 !important;*/
-}
-
-#slider .carousel__author{
+.carousel__author{
     color: dimgrey;
 }
 
-#slider .carousel-indicators li{
+.carousel-indicators {
+    margin-top: 30px;
+    position: relative !important;
+}
+
+.carousel-indicators li{
     background-color: #d3d3d3 !important;
     border-radius: 100%;
     height: 12px !important;
     width: 12px !important;
-/*    z-index: 1 !important;*/
 }
 
-#slider .carousel-indicators li.active{
+.carousel-indicators li.active{
     background-color: #d07c7c !important;
     height: 13px !important;
     width: 13px !important;
 }
 
-#slider .carousel-indicators {
-/*    bottom: -50px;*/
-    margin-top: 30px;
-    position: relative !important;
-}
-
 /*---videoConatainer---*/
 
-#video{
+.video{
     background-image: url(../img/girlHair.png);
     background-size: cover;
     background-position: center right;
@@ -635,24 +596,23 @@ nav ul > div.nav__links li a.current{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-/*    vertical-align: middle;*/
     width: 100% !important;
     height: 100% !important;
     min-height: 60vh;
     padding-bottom: 40px;
 }
 
-#video .video__playButton{
+.video__button{
     font-size: 2.5em;
     padding: 6px 26px 10px 30px;
     position: relative;
 }
 
-#video .video__playButton p{
+.video__text{
     margin: 0;
 }
 
-.video__playButton:before, .video__playButton:after, .video__playButton>:first-child:before, .video__playButton>:first-child:after
+.video__button:before, .video__button:after, .video__button>:first-child:before, .video__button>:first-child:after
 {
     position: absolute; 
     content:'';
@@ -662,56 +622,57 @@ nav ul > div.nav__links li a.current{
     border-style: solid;
 }
 
-#video.video__link{
+.video__link{
     color: black;
+    filter: grayscale(40%);
     text-transform: uppercase;
     text-decoration: none;
 }
 
 /*---Follow---*/
 
-#follow{
+.follow{
     padding-top: 60px;
     padding-bottom: 40px;
 }
 
 @media (max-width: 576px){
-    #follow{
+    .follow{
         padding-top: 80px;
         padding-bottom: 0px;
     }
 }
 
-#follow h2{
+.follow__title{
     text-align: center;
 }
 
-#follow ul{
+.follow__list{
     margin: 0 auto;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     list-style-type: none;
-    margin-top: 50px;
-    margin-bottom: 130px;
+    margin-top: 40px;
+    margin-bottom: 100px;
     padding: 0;
     width: 60vw;
 }
 
 @media (max-width: 576px){
-    #follow ul{
+    .follow__list{
         margin-top: 30px;
         margin-bottom: 90px;
         width: 80vw;
     }
 }
 
-#follow ul > li{
+.follow__item{
     opacity: 0.6;
 }
 
-#follow ul > li:hover{
+.follow__item:hover{
     background-color: #2f8383;
     border-radius: 50%;
     transition: background 0.2s, color 0.2s;
@@ -719,7 +680,7 @@ nav ul > div.nav__links li a.current{
     opacity: 1 !important;
 }
 
-#follow ul > li:hover:after{
+.follow__item:hover:after{
     pointer-events: none;
     position: absolute;
     height: 96px;
@@ -734,25 +695,19 @@ nav ul > div.nav__links li a.current{
     left: 2px;
 }
 
-#follow ul > li a{
+.follow__link{
     display: flex;
     padding: 30px 30px;
 }
 
-#follow ul > li a img{
+.follow__img{
     height: 40px;
     width: 40px;
 }
 
-#follow ul > li a img:hover{
-}
-
-#follow ul li a img.follow__tumblr{
-}
-
 /*---contact---*/
 
-#contact{
+.contact{
     background-image: url(../img/architectureForm.png);
     background-size: cover;
     background-position: center center;
@@ -761,39 +716,39 @@ nav ul > div.nav__links li a.current{
     padding-bottom: 110px;
 }
 
-#contact .contactContainer{
+.contact__body{
     margin: 0 auto;
     width: 60vw;
 }
 
 @media (max-width: 576px){
-    #contact .contactContainer{
+    .contact__body{
         width: 80vw;
     }
 }
 
-#contact h2, p.contact__text, p.contact__required{
+.contact__title, .contact__text, .contact__text--required{
     text-align: center;
 }
 
-#contact p.contact__required{
+.contact__text--required{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
 }
 
-#contact .contact__text p{
+.contact__text{
     margin: 0 auto;
     margin-bottom: 40px;
 }
 
-#contact form{
+.contact__form{
     display: flex;
     flex-direction: column;
     margin-top: 60px;
 }
 
-#contact input, #contact textarea.contact__textMessage{
+.contact__input, .contact__textarea{
     border-color: #d07c7c;
     border-style: solid;
     border-width: 1px;
@@ -801,45 +756,37 @@ nav ul > div.nav__links li a.current{
     padding: 15px 25px 15px 25px;
 }
 
-#contact textarea.contact__textMessage{
+.contact__textarea{
     min-height: 100px;
     line-height: 1.25em;
     resize: none;
 }
 
-#contact .contact__required, .contact__sendButton{
+.contact__text--required, .contact__button{
     display: inline-block;
     vertical-align: middle;
 }
 
 @media (max-width: 800px){
-    #contact .contact__required{
+    .contact__text--required{
         display: block;
         float: none;
         text-align: center;
     }
 }
 
-#contact .contact__sendButton{
-/*    margin-left: 20px;*/
-}
-
 @media (max-width: 800px){
-    #contact .contact__sendButton{
-/*        margin-right: 200px;*/
+    .contact__button{
         display: block;
         float: none;
         margin: 0 auto;
         margin-top: 20px;
-/*        width: 40%;*/
-/*        width: 100px;*/
     }
 }
 
-
 /*---footer---*/
 
-footer{
+.footer{
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -847,10 +794,10 @@ footer{
     padding-bottom: 10px;
 }
 
-footer .footer__imageAngleUp{
+.footer__angle_up{
     margin-bottom: 30px;
 }
 
-footer .footer__imageLogo{
+.footer__logo{
     margin-bottom: 5px;
 }

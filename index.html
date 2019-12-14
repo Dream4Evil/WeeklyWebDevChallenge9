@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
+   
     <meta charset="UTF-8">
     <meta name="description" content="photographer Anna Maria specializing in wedding photos">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.min.css">
+    
     <title>MariaAnna photography</title>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     
     <!--Bootstrap Carousel-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-      <link rel="stylesheet" href="css/bootstrap_carousel.min.css">
-      <script src="js/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap_carousel.min.css">
+    <script src="js/bootstrap.min.js"></script>
     
 </head>
 
 <body onresize="checkMenu()" onload="checkMenu()">
    
-    <main>
+    <main class="main">
         
-        <section id="welcome">
+        <section id="welcome" class="welcome">
           
-           <div class="welcomeTextContainer">
-               <h1>
+           <div class="welcome__body">
+               <h1 class="welcome__main_title">
                <picture>
                    <source srcset="img/compressed/logoMariaAnna.webp" type="image/webp">
                    <source srcset="img/logoMariaAnna.png" type="image/png">
                    <img class="welcome__logo" src="img/compressed/logoMariaAnna.png" alt="Maria Anna photography"> 
                 </picture>
                </h1>   
-                <h2>See the world through my lens</h2>
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris.</p>
+                <h2 class="welcome__title">See the world through my lens</h2>
+                <hr class="welcome__break">
+                <p class="welcome__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris.</p>
             </div>
                
             <a href="#about">
@@ -47,16 +49,16 @@
                 
         </section>
         
-        <nav>
+        <nav class="nav">
 
-            <ul>
-              <div class="nav__mobileButton">
-               <a href="javascript:void(0);" class="nav__mobileButtonIcon" onclick="myFunction()">&#9776;</a>
+            <ul class="nav__list">
+              <div class="mobile_button__link">
+               <a href="javascript:void(0);" class="mobile_button__icon" onclick="myFunction()">&#9776;</a>
               </div>
               
               <div class="nav__links" id="nav__links">
-                   <li class="floatLeft">
-                       <a class="welcome__logo--link" href="#welcome">
+                   <li class="nav__item block--left">
+                       <a class="nav__link welcome__logo--link" href="#welcome">
                            <picture>
                               <source srcset="img/compressed/logoMariaAnnaMenu.webp" type="image/webp">
                               <source srcset="img/logoMariaAnnaMenu.png" type="image/png">
@@ -64,91 +66,91 @@
                            </picture>
                        </a>
                    </li>
-                   <li><a href="#contact">Contact me</a></li>
-                   <li><a href="#follow">Follow me</a></li>
-                   <li><a href="#works">Works</a></li>
-                   <li><a href="#about">About me</a></li>
+                   <li class="nav__item"><a class="nav__link" href="#contact">Contact me</a></li>
+                   <li class="nav__item"><a class="nav__link" href="#follow">Follow me</a></li>
+                   <li class="nav__item"><a class="nav__link" href="#works">Works</a></li>
+                   <li class="nav__item"><a class="nav__link" href="#about">About me</a></li>
                </div>
                
             </ul>
             
         </nav>
         
-        <section id="about">
-            <h2>A little about me</h2>
+        <section id="about" class="about">
+            <h2 class="about__title">A little about me</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris.
+            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris.
             </p>
         </section>
         
-        <section id="works">
+        <section id="works" class="works">
            
-            <h2 class="textAlignCenter">Works</h2>   
+            <h2 class="text--center">Works</h2>   
             <hr>
             
-            <div class="worksGrid grayScale50">
+            <div class="works__body">
 
-                <div class="workContainer worksNature">
-                    <div class="darkerContainer">
-                       <a class="work__link" href="">
-                            <div class="worksGrid__text">
-                                <h3>Nature</h3>
-                                <p>beautiful nature</p>
+                <div class="works__block works__nature">
+                    <div class="works__block--darker">
+                       <a class="works__link" href="">
+                            <div class="works__caption">
+                                <h3 class="works__title">Nature</h3>
+                                <p class="works_text">beautiful nature</p>
                             </div>
                         </a>
                     </div>
                 </div>
                    
-                <div class="workContainer worksPeople">
-                 <div class="darkerContainer">
-                  <a class="work__link" href="">
-                   <div class="worksGrid__text">
-                        <h3>People</h3>
-                        <p>beautiful people</p>
+                <div class="works__block works__people">
+                 <div class="works__block--darker">
+                  <a class="works__link" href="">
+                   <div class="works__caption">
+                        <h3 class="works__title">People</h3>
+                        <p class="works_text">beautiful people</p>
                     </div>
                     </a>
                  </div>
                 </div>
 
-                <div class="workContainer worksUrban">
-                    <div class="darkerContainer">
-                     <a class="work__link" href="">
-                      <div class="worksGrid__text">
-                           <h3>Urban</h3>
-                            <p>beautiful urban</p>
+                <div class="works__block works__urban">
+                    <div class="works__block--darker">
+                     <a class="works__link" href="">
+                      <div class="works__caption">
+                           <h3 class="works__title">Urban</h3>
+                            <p class="works_text">beautiful urban</p>
                         </div>
                         </a>
                     </div>
                 </div>
 
-                <div class="workContainer worksWedding">
-                    <div class="darkerContainer">
-                      <a class="work__link" href="">
-                       <div class="worksGrid__text">
-                            <h3>Wedding</h3>
-                            <p>beautiful wedding</p>
+                <div class="works__block works__wedding">
+                    <div class="works__block--darker">
+                      <a class="works__link" href="">
+                       <div class="works__caption">
+                            <h3 class="works__title">Wedding</h3>
+                            <p class="works_text">beautiful wedding</p>
                         </div>
                       </a>
                     </div>
                 </div>
 
-                <div class="workContainer worksArchitecture">
-                 <div class="darkerContainer">
-                  <a class="work__link" href="">
-                   <div class="worksGrid__text">
-                        <h3>Architecture</h3>
-                        <p>beautiful architecture</p>
+                <div class="works__block works__architecture">
+                 <div class="works__block--darker">
+                  <a class="works__link" href="">
+                   <div class="works__caption">
+                        <h3 class="works__title">Architecture</h3>
+                        <p class="works_text">beautiful architecture</p>
                     </div>
                     </a>
                  </div>
                 </div>
 
-                <div class="workContainer worksAnimals brightness50">
-                 <div class="darkerContainer">
-                  <a class="work__link" href="">
-                   <div class="worksGrid__text">
-                        <h3>Animals</h3>
-                        <p>beautiful animals</p>
+                <div class="works__block works__animals brightness50">
+                 <div class="works__block--darker">
+                  <a class="works__link" href="">
+                   <div class="works__caption">
+                        <h3 class="works__title">Animals</h3>
+                        <p class="works_text">beautiful animals</p>
                     </div>
                     </a>
                  </div>
@@ -156,11 +158,11 @@
                 
             </div>
                 
-            <button>Load more</button>
+            <button class="btn works__btn">Load more</button>
         
         <!--Carousel-->
 
-        <div id="slider" class="carousel slide" data-ride="carousel">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
 
             <h2>See the world through my lens</h2>
             <hr>
@@ -181,20 +183,20 @@
             </div>
 
             <ol class="carousel-indicators">
-                <li data-target="#slider" data-slide-to="0" class="active"></li>
-                <li data-target="#slider" data-slide-to="1"></li>
-                <li data-target="#slider" data-slide-to="2"></li>
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
             </ol>
 
         </div>
     
        <!--Video-->
        
-        <a id="video" class="video__link grayScale40" href="">
-              <div class="video__playButton">
-                  <p>></p>
+        <a id="video" class="video video__link" href="">
+              <div class="video__button">
+                  <p class="video__text">></p>
               </div>
-              <p class=".video__captionText">Watch my video</p>
+              <p class="video__text">Watch my video</p>
               <div class="video__line--leftUp"></div>
         </a>
 
@@ -203,34 +205,54 @@
         
         <!--follow-->
         
-        <section id="follow">
+        <section id="follow" class="follow">
            
-            <h2>Follow me</h2>
+            <h2 class="follow__title">Follow me</h2>
             <hr>
-            <ul>
-                <li><a class="" href=""><img class="" src="icons/466-pinterest.svg" alt="pinterest"></a></li>
-                <li><a href=""><img class="follow__instagram" src="icons/403-instagram.svg" alt="instagram"></a></li>
-                <li><a href=""><img src="icons/407-twitter.svg" alt="twitter"></a></li>
-                <li><a href=""><img src="icons/396-google-plus.svg" alt="google plus"></a></li>
-                <li><a href=""><img class="follow__tumblr" src="icons/442-tumblr.svg" alt="tumblr"></a></li>
+            <ul class="follow__list">
+                <li class="follow__item">
+                    <a class="follow__link" href="">
+                        <img class="follow__img" src="icons/466-pinterest.svg" alt="pinterest">   
+                    </a>
+                </li>
+                <li class="follow__item">
+                    <a class="follow__link" href="">
+                        <img class="follow__img follow__instagram" src="icons/403-instagram.svg" alt="instagram">
+                    </a>
+                </li>
+                <li class="follow__item">
+                    <a class="follow__link" href="">
+                        <img class="follow__img" src="icons/407-twitter.svg" alt="twitter">
+                    </a>
+                </li>
+                <li class="follow__item">
+                    <a class="follow__link" href="">
+                        <img class="follow__img" src="icons/396-google-plus.svg" alt="google plus">
+                    </a>
+                </li>
+                <li class="follow__item">
+                    <a class="follow__link" href="">
+                        <img class="follow__img follow__tumblr" src="icons/442-tumblr.svg" alt="tumblr">
+                    </a>
+                </li>
             </ul>
             
         </section>
         
         <!--contact-->
         
-        <section id="contact">
-           <div class="contactContainer">
-                <h2>Contact me</h2>
+        <section id="contact" class="contact">
+           <div class="contact__body">
+                <h2 class="contact__title">Contact me</h2>
                 <hr>
                 <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <form action="">
-                   <input type="text" placeholder="Your Name*">
-                   <input type="email" placeholder="Your E-mail address*">
-                    <textarea type="text" placeholder="Your Message" class="contact__textMessage"></textarea>
+                <form class="contact__form" action="">
+                   <input class="contact__input" type="text" placeholder="Your Name*">
+                   <input class="contact__input" type="email" placeholder="Your E-mail address*">
+                    <textarea class="contact__textarea" type="text" placeholder="Your Message" ></textarea>
                    <div class="form__bellow">
-                       <p class="contact__required">All fields marked with an asteriks (*) are required</p>
-                       <button class="contact__sendButton floatRight">Send</button>
+                       <p class="contact__text--required">All fields marked with an asteriks (*) are required</p>
+                       <button class="btn contact__button block--right">Send</button>
                    </div>
                 </form>
             </div>
@@ -238,22 +260,22 @@
         
     </main>
     
-    <footer>
-      <a class="grayScale50" href="#welcome">
+    <footer class="footer">
+      <a href="#welcome">
           <picture>
               <source srcset="img/compressed/angleUp.webp" type="image/webp">
               <source srcset="img/angleUp.png" type="image/png">
-              <img class="footer__imageAngleUp" src="img/angleUp.png" alt="go to start of the site">
+              <img class="footer__angle_up" src="img/angleUp.png" alt="go to start of the site">
           </picture>
       </a>
           <picture>
               <source srcset="img/compressed/logoFooterMariaAnna.webp" type="image/webp">
               <source srcset="img/logoFooterMariaAnna.png" type="image/png">
-              <img class="footer__imageLogo" src="img/logoFooterMariaAnna.png" alt="Maria Anna">
+              <img class="footer__logo" src="img/logoFooterMariaAnna.png" alt="Maria Anna">
           </picture>
         <p class="footerCopyright">© Copyright 2014 MariaAnna</p>
     </footer>
     
 </body>
-<script src="js/javascript.min.js"></script>
+<script src="js/javascript.js"></script>
 </html>
