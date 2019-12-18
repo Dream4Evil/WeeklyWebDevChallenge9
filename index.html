@@ -20,7 +20,7 @@
     
 </head>
 
-<body onresize="checkMenu()" onload="checkMenu()">
+<body>
    
     <main class="main">
         
@@ -53,7 +53,7 @@
 
             <ul class="nav__list">
               <div class="mobile_button__link">
-               <a href="javascript:void(0);" class="mobile_button__icon" onclick="myFunction()">&#9776;</a>
+               <a href="javascript:void(0);" class="mobile_button__icon" onclick="nav_mobile()">&#9776;</a>
               </div>
               
               <div class="nav__links" id="nav__links">
@@ -246,7 +246,7 @@
                 <h2 class="contact__title">Contact me</h2>
                 <hr>
                 <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <form class="contact__form" action="">
+                <form class="contact__form" action="" method="get">
                    <input class="contact__input" type="text" placeholder="Your Name*">
                    <input class="contact__input" type="email" placeholder="Your E-mail address*">
                     <textarea class="contact__textarea" type="text" placeholder="Your Message" ></textarea>
