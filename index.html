@@ -247,15 +247,17 @@
                 <h2 class="contact__title">Contact me</h2>
                 <hr>
                 <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <form class="contact__form" action="" method="get">
-                   <input class="contact__input" type="text" placeholder="Your Name*">
-                   <input class="contact__input" type="email" placeholder="Your E-mail address*">
-                    <textarea class="contact__textarea" type="text" placeholder="Your Message" ></textarea>
+                
+               <form class="contact__form" action="" method="get">
+                   <input class="contact__input" type="text" required placeholder="Your Name*" pattern="[a-zA-Z]{2,99}">
+                   <input class="contact__input" type="email"  required pattern="[a-zA-Z0-9-]{2,}@[a-zA-Z0-9-]{2,}.[a-zA-Z]{2,}" placeholder="Your E-mail address*">
+                    <textarea class="contact__textarea" type="text" required placeholder="Your Message" minlength="5"></textarea>
                    <div class="form__bellow">
                        <p class="contact__text--required">All fields marked with an asteriks (*) are required</p>
                        <button class="btn contact__button block--right">Send</button>
                    </div>
                 </form>
+               
             </div>
         </section>
         
